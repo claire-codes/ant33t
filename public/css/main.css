@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'NumberPlate';
+  src: url("../fonts/uknumberplate-webfont.woff2") format("woff2"), url("../fonts/uknumberplate-webfont.woff") format("woff"); }
+
+.number-plate {
+  margin: 0;
+  font-family: 'NumberPlate', sans-serif;
+  background-color: #ffd72d;
+  border: 1px solid black;
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 3px; }
+
+body {
+  font-family: sans-serif;
+  margin: 0; }
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20px 40px));
+  grid-gap: 10px; }
+
+.grid-box {
+  background-color: #ccc;
+  border-radius: 5px; }

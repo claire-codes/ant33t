@@ -1,0 +1,20 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/main.scss public/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "build-css": "^0.2.0",
+    "connect": "^3.6.6",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.17.1",
+    "serve-static": "^1.13.2"
+  }
+}
