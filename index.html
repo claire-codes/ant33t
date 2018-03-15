@@ -13,6 +13,7 @@
     <link rel="manifest" href="public/favicons/manifest.json">
     <meta name="theme-color" content="#ffffff">
 </head>
+
 <body>
     <div class="number-plate">ANT 33T</div>
     <div>is 30! Happy Birthday! 🎉</div>
@@ -20,36 +21,36 @@
     <div class="js-emoji-container"></div>
     <div><button type="button" class="js-change">Change emoji</button></div>
     <div class="grid-wrapper">
-        <div class="grid-box js-grid-box">💩</div>
-        <div class="grid-box js-grid-box">B</div>
-        <div class="grid-box js-grid-box">C</div>
-        <div class="grid-box js-grid-box">D</div>
-        <div class="grid-box js-grid-box">E</div>
-        <div class="grid-box js-grid-box">F</div>
-        <div class="grid-box js-grid-box">G</div>
-        <div class="grid-box js-grid-box">💩</div>
-        <div class="grid-box js-grid-box">B</div>
-        <div class="grid-box js-grid-box">C</div>
-        <div class="grid-box js-grid-box">D</div>
-        <div class="grid-box js-grid-box">E</div>
-        <div class="grid-box js-grid-box">F</div>
-        <div class="grid-box js-grid-box">G</div>
-        <div class="grid-box js-grid-box">💩</div>
-        <div class="grid-box js-grid-box">B</div>
-        <div class="grid-box js-grid-box">C</div>
-        <div class="grid-box js-grid-box">D</div>
-        <div class="grid-box js-grid-box">E</div>
-        <div class="grid-box js-grid-box">F</div>
-        <div class="grid-box js-grid-box">G</div>
-        <div class="grid-box js-grid-box">💩</div>
-        <div class="grid-box js-grid-box">B</div>
-        <div class="grid-box js-grid-box">C</div>
-        <div class="grid-box js-grid-box">D</div>
-        <div class="grid-box js-grid-box">E</div>
-        <div class="grid-box js-grid-box">F</div>
-        <div class="grid-box js-grid-box">G</div>
-        <div class="grid-box js-grid-box">F</div>
-        <div class="grid-box js-grid-box">G</div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
+        <div class="grid-box js-grid-box"></div>
     </div>
 
     <script>
@@ -57,13 +58,12 @@
         var getRandomEmoji = function() {
             return randomEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
         }
+
         var newRandomEmoji = function(currentEmoji) {
             // Ensure that new one isn't the same as previous
             var same = true;
             var newEmoji = getRandomEmoji();
             while (same) {
-                console.log(currentEmoji);
-                console.log(newEmoji);
                 if (newEmoji != currentEmoji) {
                     same = false;
                 } else {
@@ -71,8 +71,8 @@
                 }
             }
             return newEmoji;
-
         }
+
         var generateThirtyEmoji = function() {
             var times = 30;
             var thirtyRandomEmoji = "";
@@ -83,16 +83,20 @@
             }
             return thirtyRandomEmoji;
         }
-        // Do on page load
-        document.querySelector('.js-change').addEventListener('click', function() {
-            // Change to insert into DOM
-            // generateThirtyEmoji();
+
+        var fillGridWithEmoji = function() {
             var currentEmoji = document.querySelector('.js-grid-box').innerHTML;
             var randomEmoji = newRandomEmoji(currentEmoji);
             document.querySelectorAll('.js-grid-box').forEach(function(box) {
                 box.innerHTML = randomEmoji;
             });
+        }
+
+        document.querySelector('.js-change').addEventListener('click', function() {
+            fillGridWithEmoji();
         });
+
+        fillGridWithEmoji();
     </script>
 </body>
 </html>
