@@ -15,18 +15,45 @@
 }
 
 body {
-    font-family: sans-serif;
-    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
 }
 
 .grid-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20px 40px));
+    grid-template-columns: repeat(auto-fill, minmax(20px, 15%));
     grid-gap: 10px;
-    max-width: 500px;
+    max-width: 700px;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .grid-box {
     background-color: #ccc;
     border-radius: 5px;
+    // media query for tablet and mobile
+    font-size: 50px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background: #FF1744;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.birthday-text {
+    font-family: 'Bangers', cursive;
+}
+
+@media (max-width: 400px) {
+    .grid-box {
+        font-size: 30px;
+    }
 }
