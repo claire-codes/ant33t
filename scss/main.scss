@@ -1,3 +1,8 @@
+$color-reg-plate: #ffd72d;
+$color-shadow: #ccc;
+$color-accent: #ff1744;
+$shadow-box: 5px 5px $color-shadow;
+
 @font-face {
   font-family: 'NumberPlate';
   src:  url('../fonts/uknumberplate-webfont.woff2') format('woff2'),
@@ -7,7 +12,7 @@
 .number-plate {
     margin: 0 auto 10px;
     font-family: 'NumberPlate', sans-serif;
-    background-color: #ffd72d;
+    background-color: $color-reg-plate;
     border: 1px solid black;
     padding: 2px 10px;
     border-radius: 3px;
@@ -17,7 +22,7 @@
     align-items: center;
     font-size: 45px;
     width: 200px;
-    box-shadow: 5px 5px #ccc;
+    box-shadow: $shadow-box;
 }
 
 body {
@@ -26,7 +31,7 @@ body {
     margin: 0 auto;
     text-align: center;
     font-size: 18px;
-    background-color: #FF1744;
+    background-color: $color-accent;
 }
 
 .wrapper {
@@ -47,19 +52,19 @@ body {
     border-radius: 5px;
     font-size: 50px;
     text-align: center;
-    border: 2px solid #FF1744;
-    box-shadow: 5px 5px #ccc;
+    border: 2px solid $color-accent;
+    box-shadow: $shadow-box;
 }
 
 button {
     padding: 10px 20px;
-    background: #FF1744;
+    background: $color-accent;
     font-size: 20px;
     margin-bottom: 20px;
     color: white;
     cursor: pointer;
     border: none;
-    box-shadow: 5px 5px #ccc;
+    box-shadow: $shadow-box;
 
     &:hover {
         opacity: 0.7;
@@ -69,7 +74,7 @@ button {
 .birthday-text {
     font-family: 'Bangers', cursive;
     font-size: 40px;
-    text-shadow: 2px 2px #ccc;
+    text-shadow: 2px 2px $color-shadow;
 }
 
 .text {
