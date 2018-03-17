@@ -5,21 +5,33 @@
 }
 
 .number-plate {
-  margin: 0;
-  font-family: 'NumberPlate', sans-serif;
-  background-color: #ffd72d;
-  border: 1px solid black;
-  display: inline-block;
-  padding: 2px 10px;
-  border-radius: 3px;
+    margin: 0 auto 10px;
+    font-family: 'NumberPlate', sans-serif;
+    background-color: #ffd72d;
+    border: 1px solid black;
+    padding: 2px 10px;
+    border-radius: 3px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    width: 200px;
+    box-shadow: 5px 5px #ccc;
 }
 
 body {
     font-family: 'Noto Sans', sans-serif;
-    width: 90%;
+    width: 75%;
     margin: 0 auto;
     text-align: center;
+    font-size: 18px;
+    background-color: #FF1744;
+}
+
+.wrapper {
     padding-top: 30px;
+    background-color: white;
 }
 
 .grid-wrapper {
@@ -32,11 +44,11 @@ body {
 }
 
 .grid-box {
-    background-color: #ccc;
     border-radius: 5px;
-    // media query for tablet and mobile
     font-size: 50px;
     text-align: center;
+    border: 2px solid #FF1744;
+    box-shadow: 5px 5px #ccc;
 }
 
 button {
@@ -46,14 +58,36 @@ button {
     margin-bottom: 20px;
     color: white;
     cursor: pointer;
+    border: none;
+    box-shadow: 5px 5px #ccc;
+
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 .birthday-text {
     font-family: 'Bangers', cursive;
+    font-size: 40px;
+    text-shadow: 2px 2px #ccc;
+}
+
+.text {
+    margin-bottom: 10px;
+}
+
+.footer {
+    padding: 30px 0;
 }
 
 @media (max-width: 400px) {
     .grid-box {
         font-size: 30px;
+    }
+}
+
+@media (max-width: 770px) {
+    body {
+        width: 90%;
     }
 }
