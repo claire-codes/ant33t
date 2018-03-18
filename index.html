@@ -86,7 +86,7 @@
             var currentEmoji = document.querySelector('.js-grid-emoji').innerHTML;
             var randomEmoji = newRandomEmoji(currentEmoji);
 
-            allGridBoxes.forEach(function(box) {
+            Array.from(allGridBoxes).forEach(function(box) {
                 box.style.opacity = 0;
                 setTimeout(function() {
                     box.innerHTML = randomEmoji;
