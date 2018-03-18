@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="public/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="public/favicons/favicon-16x16.png">
     <link rel="manifest" href="public/favicons/manifest.json">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#ff1744">
 
     <link href="https://fonts.googleapis.com/css?family=Bangers|Noto+Sans" rel="stylesheet">
 </head>
@@ -24,36 +24,36 @@
         <div class="text">Here are 30 of your favourite emoji:</div>
         <div><button type="button" class="js-change">Change emoji</button></div>
         <div class="grid-wrapper">
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
-            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
+            <div class="grid-box"><span class="grid-emoji js-grid-emoji"></span></div>
         </div>
 
         <div class="footer">Made with 💛 by <a href="https://github.com/claireparker">Claire</a> for Ant &copy; 2018</div>
@@ -61,6 +61,7 @@
 
     <script>
         var emojiArray = ["🚗", "🐕", "🖕", "😭", "🙈", "💪", "❤️", "😘", "🏎"];
+
         var getRandomEmoji = function() {
             return randomEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
         }
@@ -79,21 +80,11 @@
             return newEmoji;
         }
 
-        var generateThirtyEmoji = function() {
-            var times = 30;
-            var thirtyRandomEmoji = "";
-            var randomEmoji = getRandomEmoji();
-            while (times > 0) {
-                thirtyRandomEmoji += randomEmoji;
-                times--;
-            }
-            return thirtyRandomEmoji;
-        }
-
         var fillGridWithEmoji = function() {
-            var allGridBoxes = document.querySelectorAll('.js-grid-box');
-            var currentEmoji = document.querySelector('.js-grid-box').innerHTML;
+            var allGridBoxes = document.querySelectorAll('.js-grid-emoji');
+            var currentEmoji = document.querySelector('.js-grid-emoji').innerHTML;
             var randomEmoji = newRandomEmoji(currentEmoji);
+
             allGridBoxes.forEach(function(box) {
                 box.style.opacity = 0;
                 setTimeout(function() {
