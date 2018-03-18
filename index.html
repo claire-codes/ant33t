@@ -24,39 +24,39 @@
         <div class="text">Here are 30 of your favourite emoji:</div>
         <div><button type="button" class="js-change">Change emoji</button></div>
         <div class="grid-wrapper">
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
-            <div class="grid-box js-grid-box"></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
+            <div class="grid-box"><span class="js-grid-box"></span></div>
         </div>
 
-        <div class="footer">Made with 💛 by <a href="https://github.com/claireparker">Claire</a> for Ant</div>
+        <div class="footer">Made with 💛 by <a href="https://github.com/claireparker">Claire</a> for Ant &copy; 2018</div>
     </div>
 
     <script>
@@ -91,10 +91,15 @@
         }
 
         var fillGridWithEmoji = function() {
+            var allGridBoxes = document.querySelectorAll('.js-grid-box');
             var currentEmoji = document.querySelector('.js-grid-box').innerHTML;
             var randomEmoji = newRandomEmoji(currentEmoji);
-            document.querySelectorAll('.js-grid-box').forEach(function(box) {
-                box.innerHTML = randomEmoji;
+            allGridBoxes.forEach(function(box) {
+                box.style.opacity = 0;
+                setTimeout(function() {
+                    box.innerHTML = randomEmoji;
+                    box.style.opacity = 1;
+                }, 250);
             });
         }
 

@@ -42,7 +42,11 @@ body {
   font-size: 50px;
   text-align: center;
   border: 2px solid #ff1744;
-  box-shadow: 5px 5px #ccc; }
+  box-shadow: 5px 5px #ccc;
+  min-height: 70px; }
+
+.js-grid-box {
+  transition: opacity .25s ease-in-out; }
 
 button {
   padding: 10px 20px;
@@ -69,7 +73,8 @@ button {
 
 @media (max-width: 400px) {
   .grid-box {
-    font-size: 30px; } }
+    font-size: 30px;
+    min-height: 41px; } }
 
 @media (max-width: 770px) {
   body {
