@@ -59,6 +59,8 @@ button {
   box-shadow: 5px 5px #ccc; }
   button:hover {
     opacity: 0.7; }
+  button:active {
+    background-color: #b00022; }
 
 .birthday-text {
   font-family: 'Bangers', cursive;
