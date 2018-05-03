@@ -30,12 +30,26 @@ body {
   background-color: white; }
 
 .grid-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20px, 15%));
-  grid-gap: 10px;
+  display: flex;
+  flex-wrap: wrap; }
+  .grid-wrapper > div {
+    flex-basis: calc(calc(100% - 50px) / 6);
+    margin-bottom: 10px; }
+  .grid-wrapper > div:not(:nth-child(6n)) {
+    margin-right: 10px; }
+
+@supports (display: grid) {
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20px, 15%));
+    grid-gap: 10px;
+    justify-content: center; }
+    .grid-wrapper > div {
+      margin: 0; } }
+
+.generic-wrapper {
   max-width: 700px;
-  margin: 0 auto;
-  justify-content: center; }
+  margin: 0 auto; }
 
 .grid-box {
   border-radius: 5px;
@@ -43,7 +57,8 @@ body {
   text-align: center;
   border: 2px solid #ff1744;
   box-shadow: 5px 5px #ccc;
-  min-height: 70px; }
+  min-height: 70px;
+  box-sizing: border-box; }
 
 .grid-emoji {
   transition: opacity .25s ease-in-out; }

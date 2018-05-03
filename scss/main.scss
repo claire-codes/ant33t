@@ -40,12 +40,36 @@ body {
 }
 
 .grid-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20px, 15%));
-    grid-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    & > div {
+        flex-basis: calc(calc(100% - 50px) / 6);
+        margin-bottom: 10px;
+    }
+
+    & > div:not(:nth-child(6n)) {
+        margin-right: 10px;
+    }
+}
+
+@supports (display: grid) {
+    .grid-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20px, 15%));
+        grid-gap: 10px;
+        justify-content: center;
+
+        & > div {
+            margin: 0;
+        }
+    }
+
+}
+
+.generic-wrapper {
     max-width: 700px;
     margin: 0 auto;
-    justify-content: center;
 }
 
 .grid-box {
@@ -55,6 +79,7 @@ body {
     border: 2px solid $color-accent;
     box-shadow: $shadow-box;
     min-height: 70px;
+    box-sizing: border-box;
 }
 
 .grid-emoji {
