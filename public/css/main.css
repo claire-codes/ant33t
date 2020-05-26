@@ -29,23 +29,21 @@ body {
   padding-top: 30px;
   background-color: white; }
 
-.grid-wrapper {
-  display: flex;
-  flex-wrap: wrap; }
-  .grid-wrapper > div {
-    flex-basis: calc(calc(100% - 50px) / 6);
-    margin-bottom: 10px; }
-  .grid-wrapper > div:not(:nth-child(6n)) {
-    margin-right: 10px; }
-
-@supports (display: grid) {
+@supports not (display: grid) {
   .grid-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20px, 15%));
-    grid-gap: 10px;
-    justify-content: center; }
+    display: flex;
+    flex-wrap: wrap; }
     .grid-wrapper > div {
-      margin: 0; } }
+      flex-basis: calc(calc(100% - 50px) / 6);
+      margin-bottom: 10px; }
+    .grid-wrapper > div:not(:nth-child(6n)) {
+      margin-right: 10px; } }
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20px, 15%));
+  grid-gap: 10px;
+  justify-content: center; }
 
 .generic-wrapper {
   max-width: 700px;

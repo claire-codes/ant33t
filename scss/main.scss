@@ -39,32 +39,27 @@ body {
     background-color: white;
 }
 
-.grid-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+@supports not (display: grid) {
+    .grid-wrapper {
+        display: flex;
+        flex-wrap: wrap;
 
-    & > div {
-        flex-basis: calc(calc(100% - 50px) / 6);
-        margin-bottom: 10px;
-    }
+        & > div {
+            flex-basis: calc(calc(100% - 50px) / 6);
+            margin-bottom: 10px;
+        }
 
-    & > div:not(:nth-child(6n)) {
-        margin-right: 10px;
+        & > div:not(:nth-child(6n)) {
+            margin-right: 10px;
+        }
     }
 }
 
-@supports (display: grid) {
-    .grid-wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(20px, 15%));
-        grid-gap: 10px;
-        justify-content: center;
-
-        & > div {
-            margin: 0;
-        }
-    }
-
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20px, 15%));
+    grid-gap: 10px;
+    justify-content: center;
 }
 
 .generic-wrapper {
